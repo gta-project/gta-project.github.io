@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    GTA Project for PEI
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="./assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="./assets/demo/demo.css" rel="stylesheet" />
+
+  <style>
+  p {
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 17px;
+    }
+
+
+  </style>
+
+  <style type="text/css">
+
+  #idd{
+    font-family: gta;
+  }
+
+  #cardd{
+    margin:30px;
+  }
+
+  @font-face {
+    font-family: 'gta';
+    font-style: normal;
+    font-weight: 500;
+    font-size:25px;
+    src: url(pricedown.ttf);
+  }
+  </style>
+
+</head>
+
+<body class="index-page sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="index.html" id="idd">
+          GTA Project: Client</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown nav-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <i class="material-icons">person</i> Client
+            </a>
+            <div class="dropdown-menu dropdown-with-icons">
+              <a href="javascript:void(0)" class="dropdown-item" onClick="scrollToIntroduction()">
+                <i class="material-icons">short_text</i> Abstract
+              </a>
+              <a href="Javascript:void(0)" class="dropdown-item" onClick="scrollToGoalsAndObjectives()">
+                <i class="material-icons">accessibility</i> Generate your dataset with our tool
+              </a>
+
+              <a href="Javascript:void(0)" class="dropdown-item" onClick="scrollToDownload()">
+                <i class="material-icons">cloud_download</i> Download
+              </a>
+
+              <a href="javascript:void(0)" class="dropdown-item" onClick="scrollToTeamAndMentors()">
+                <i class="material-icons">people</i>Team Members and Mentors</a>
+
+              <a href="Javascript:void(0)" class="dropdown-item" onClick="scrollToFaq()">
+                <i class="material-icons">question_answer</i> FAQ
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="documentation.html">
+              <i class="material-icons">book</i> Go to Documentation
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url('assets/img/TESLA.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="brand">
+            <h1 id="idd">GTA V Project</h1>
+            <div>
+            <h3>Generation of a synthetic dataset for autonomous vehicles</h3> <span class="badge badge-secondary">GTA V Mod</span></h3>
+          </div>
+            <br> <br>
+            <button class="btn btn-primary btn-round" type="submit" onClick="scrollToDownload()" style="background-color: #2196f3"> <!--#ffffff -->
+
+              <i class="material-icons">cloud_download</i> Download
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main main-raised">
+
+    <div class="section section-Introduction">
+
+      <div class = "container">
+
+
+        <h4>Abstract</h4>
+        <h2> Autonomous Driving and virtualization </h2>
+        <br>
+        <p>
+          Making a car autonomous can be a very difficult task, but it’s based on two main factors: sensors (like RADAR or LiDAR)that will collect data information
+          and the processor, that will define a set of actions to take (like turn right or left or increase speed) based on that data. Artificial Intelligence is
+          used by the processor to learn the best actions to take with those cases. But how? Let’s give an example: when we stop on a red light or speed down
+          because of untypical meteorological conditions, we use our memory to take that quick actions. Our driving experience habituate us and our brain to look
+          for that little pieces of information that encounter on the road. To make a car autonomous, we need that cognitive intelligence implemented on car’s
+          processor so the car can learn and execute those actions that a human would do on determinized cases.
+          The problem is the collection of massive data quantities (also called big data) that forces to have a vehicle fleet  with top gear sensors.
+          This slow and expensive approach don’t cover all the cases like accidents, to collect data.
+          <br>
+          <br>
+          A more efficient and less expensive way to collect big data is to use a drive simulator, like the GTA V. The cost is very low due to it is a
+          virtual simulation and also have the possibility to all data types like accidents.
+        </p>
+
+
+    </div>
+  </div>
+
+    <div class="section section-GoalsAndObjectives" > <!-- style="background-color:#EFEFEF" -->
+      <div class="container">
+          <h2>
+            Generate your dataset with our tool
+          </h2>
+          <br>
+          <p>Our mission is to collect data from a LIDAR sensor implemented on a car within GTA V and use them to generate your dataset. The dataset is real as possible and you can use it on your research about real LIDAR sensors.</p>
+
+
+
+      </div>
+    </div>
+
+    <div class="section section-download" > <!-- style="background-color:#EFEFEF" -->
+      <div class="container">
+        <h2>Download Section
+      </h2>
+      <span class = "badge badge-secondary">Experimental build   </span>
+          <!-- <span class="badge badge-secondary">GTA V Mod</span>4</h2> --////> 00    --> <!-- -->
+
+            <br>
+            <br>
+            <br>
+            <br>
+        <p> We are still in development... but now you can download and test it even in development! See our <i class="fa fa-github"></i> <a href="https://github.com/gta-project/mod"> github repository </a>for download and more info.</p>
+
+        </a>
+        <!-- <button class="btn btn-primary btn-round" type="submit"> -->
+        <!-- <i class="material-icons">cloud_download</i>  Download comming soon <i class="material-icons" >favorite</i>   <i class="fa fa-github"></i>  Github repo-->
+       <!-- </button> ="
+       -->
+       <p>  </p>
+      </div>
+    </div>
+
+    <div class="section section-FAQ" > <!-- style="background-color:#EFEFEF" -->
+      <div class="container">
+      	<h2> FAQ </h2>>
+      	<br>
+
+      	<b>1. What is the reliability of the data collected in a game translated to a real life scenario? </b>
+        <br>The reliability of the data collected in a game like GTA V is poor because due to it collects ideal
+        data and not real data. Our mission is the use that ideal data and transforms into real data to test the
+        performance of a LIDAR sensor in a real life scenario. 
+        <br><br>
+		    <b>2.  Did you had any experience in the game before, and if so did is it helping in the development of this concept? </b>
+        <br>Some of us yes, but it didn’t help on this concept. We only use the game to collect data and we use some mods to do it.
+        Also, installing mods is a simple task, so no need much experience. 
+		    <br><br>
+    	<b>          3. Quando o sistema trata a informação recolhida esta é filtrada? Por exemplo se informações de possível
+        risco são analisadas antes de simples informações de rotina, de forma a tornar mais seguro este tratamento de dados pela IA. </b>
+      <br>Yes, we use some mods to controle the environment and collect data  , so , the data that we collect are the data that
+      we expect. We don’t implement IA yet. Our objective is to test different LIDARS and study the impact of them in autonomous
+      driving and see if they can recognize different objects with a certain level of precision and confidence. With that, AI
+      is the next big step. <br><br>
+       <b>4. Tendo uma inteligência artificial desenvolvida, é possível testá-la utilizando o "simulador"? Se sim, como?
+         Seria possível controlar variáveis de teste? </B>
+         <br>Yes, you can implement IA by modding the game and you can controle what you want using also some mods. <br><br>
+         <b>5. How is the data gathering done? </b><br>Basically, we use some pre built mods to gather LIDAR data and use that
+          data (point cloud + camera) to make a distorted and coloured point cloud. Next, we use other script and other <br><br>
+<b>6. Will the end user need any background experience using LiDAR sensors?</b>
+<br> Yes, the user must have a LIDAR background experience. 
+
+<br><br> <!--,-->
+<b>7. Sabendo que, apesar de a simulaÃ§Ã£o de conduÃ§Ã£o no jogo (Grand Theft Auto 5) é relativamente fiável,
+  mas tratando-se de um jogo em que o utilizador Ã© abordado por atividades criminosas quase constantemente,
+  e que os condutores simulados dentro do próprio jogo nÃ£o sÃ£o os condutores mais corretos, especialmente em
+  situaÃ§Ãµes de risco (por exemplo, acidentes), atÃ© que ponto Ã© que o data set gerado Ã© fiável para a simulaÃ§Ã£o
+  de conduÃ§Ã£o autónoma do veículo?  </b>
+
+<br>We use mods to controli that risk situations.
+<br>
+</div>
+</div>
+
+
+  <div class="section section-TeamMembers">
+    <div class = "container">
+      <div id="TeamMembers">
+
+          <h2>Meet the team </h2>
+
+        <br>
+
+
+        <div class="row">
+
+          <div class="col-sm-2 ml-auto">
+            <h4><center> <b>Bruno Aguiar</b></center></h4>
+            <img src="./assets/img/faces/Bruno-Aguiar.jpg" alt="Circle Image" class="rounded-circle img-fluid">
+              <p> <center> brunoaguiar@ua.pt <center></p>
+
+          </div>
+
+          <div class="col-sm-2 ml-auto">
+            <h4><center><b>Tiago Correia </center></b></h4>
+            <img src="./assets/img/faces/Tiago-Correia.png" alt="Circle Image" class="rounded-circle img-fluid">
+            <p> <center> tcorreia@ua.pt <center></p>
+          </div>
+          <div class="col-sm-2 ml-auto">
+            <h4><center><b>Xavier Santos</center></b></h4>
+            <img src="./assets/img/faces/Xavier-Santos.jpg" alt="Circle Image" class="rounded-circle img-fluid">
+            <p> <center> xavier@ua.pt <center></p>
+          </div>
+          <div class="col-sm-2 ml-auto">
+            <h4><center><b>João Gomes</center></b></h4>
+            <img src="./assets/img/faces/joao-gomes.png" alt="Circle Image" class="rounded-circle img-fluid">
+            <p> <center> j.gomes@ua.pt <center></p>
+          </div>
+        </div>
+
+          <br><br><br><br><h2>Mentors</h2>
+
+        <br>
+
+        <div class="row">
+
+            <div class="col-sm-2 ml-auto">
+              <h4><center>Miguel Drummond</center></h4>
+              <img src="./assets/img/faces/Minguuel--Drummonde.png" alt="Circle Image" class="rounded-circle img-fluid">
+            <p> <center>  mvd@av.it.pt <center> </p>
+            </div>
+
+            <div class="col-sm-2 ml-auto">
+              <h4><center>Paulo Monteiro</center></h4>
+              <img src="./assets/img/faces/Paulo-Monteiro.png" alt="Circle Image" class="rounded-circle img-fluid">
+              <p> <center> paulo.monteiro@ua.pt </center> <p>
+            </div>
+
+            <div class="col-sm-2 ml-auto">
+              <h4></h4>
+              <img src="" alt="" class="rounded-circle img-fluid">
+            </div>
+            <div class="col-sm-2 ml-auto">
+              <h4></h4>
+              <img src="" alt="" class="rounded-circle img-fluid">
+            </div>
+      </div>
+
+
+
+
+          <!-- <div class="col-sm-2 ml-auto">
+            <h4>Xavier Santos</h4>
+            <img src="./assets/img/faces/Xavier-Santos.jpg" alt="Circle Image" class="rounded-circle img-fluid">
+          </div>
+          <div class="col-sm-2 ml-auto">
+            <h4>João Gomes</h4>
+            <img src="./assets/img/faces/avatar.jpg" alt="Circle Image" class="rounded-circle img-fluid">
+          </div>
+          -->
+        </div>
+
+        <div class="row">
+        </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!--  End Modal -->
+  <footer class="footer" data-background-color="black">
+    <div class="container">
+      <nav class="float-left">
+        <ul>
+
+          <li>
+            <img src="./assets/img/logo_UA.png" width="150px">
+          </li>
+          <li>
+            <a href="https://code.ua.pt/projects/pei-2018-2019-g13?jump=my">
+              code.ua.pt
+            </a>
+          </li>
+          <!-- <li>
+            <a href="https://creative-tim.com/presentation">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.creative-tim.com">
+              Blog
+            </a>(comming soon <i class="material-icons" >favorite</i>)
+          </li> -->
+
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <script src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/material-kit.js?v=2.0.5" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+      //init DateTimePickers
+      materialKit.initFormExtendedDatetimepickers();
+
+      // Sliders Init
+      materialKit.initSliders();
+    });
+
+
+    function scrollToDownload() {
+
+      if ($('.section-download').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-download').offset().top
+        }, 1000);
+      }
+    }
+
+    function scrollToIntroduction() {
+
+      if ($('.section-Introduction').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-Introduction').offset().top
+        }, 1000);
+      }
+    }
+
+    function scrollToGoalsAndObjectives() {
+
+      if($('.section-GoalsAndObjectives').lengh != 0) {
+
+        $("html, body").animate( {scrollTop: $('.section-GoalsAndObjectives').offset().top}, 1000);
+
+
+      }
+    }
+
+    function  scrollToFaq() {
+      if($('.section-FAQ').lengh != 0) {
+
+        $("html, body").animate( {scrollTop: $('.section-FAQ').offset().top}, 1000);
+
+      }
+    }
+
+    function scrollToTeamAndMentors() {
+
+      if($('.section-TeamMembers').lengh != 0) {
+
+        $("html, body").animate( {scrollTop: $('.section-TeamMembers').offset().top}, 1000);
+
+
+      }
+    }
+
+
+
+  </script>
+
+  <!--_- }) Scroll s = 808080101010AFAFAFDFDFDF .com. i  <div class="col-sm-2 ml-auto">
+    <h4>Rounded Raised</h4>
+    <img src="./assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid">
+  </div>
+  <div class="col-sm-2 ml-auto">
+    <h4>Circle Raised</h4>
+    <img src="./assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+  </div> <div class="col-sm-2">
+    <h4>Rounded Image</h4>
+    <img src="./assets/img/faces/avatar.jpg" alt="Rounded Image" class="rounded img-fluid">
+  </div> Tiago-Correia jpg Tago Correia
+
+  <div class="copyright float-right">
+    &copy;
+    <script>
+      document.write(new Date().getFullYear())
+    </script>, made with <i class="material-icons">favorite</i> by
+    <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+  </div>
+  /pricedown/
+  <br>
+  12
+  >
+   <br>
+  /pricedown/
+  old
+  <div class="section section-download" id="downloadSection">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-8 ml-auto mr-auto">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>
+    Generate your dataset with our tool
+  </h2>
+  <br>
+
+  <br>
+  <br>
+  <p>We collect data from GTA V car sensors and use them to generate your dataset. The dataset is real as possible and you can use it on your research about real LIDAR sensors. You're welcome ;).</p>
+
+ You're welcome ;).
+
+
+     .wrapper {
+             display: grid;
+         grid-gap: 10px;
+             grid-template-columns: [col] 125px [col] 800px [col] 100px [col] 100px  ;
+             grid-template-rows: [row] auto [row] auto [row] ;
+             background-color: #fff;
+             color: #444;
+         }
+
+         .c {
+           grid-column: col ;
+           grid-row: row 2 ;
+       }
+       .d {
+           grid-column: col 2 / span 3 ;
+           grid-row: row 2 ;
+       }
+
+  old
+
+  go
+
+  3/documentation.html
+  -->
+</body>
+
+</html>

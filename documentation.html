@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    GTA Project for PEI
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="./assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="./assets/demo/demo.css" rel="stylesheet" />
+
+
+  <style>
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 17px;
+  }
+
+  .timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+}
+
+    .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #eeeeee;
+        left: 50%;
+        margin-left: -1.5px;
+    }
+
+    .timeline > li {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li > .timeline-panel {
+            width: 46%;
+            float: left;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        }
+
+            .timeline > li > .timeline-panel:before {
+                position: absolute;
+                top: 26px;
+                right: -15px;
+                display: inline-block;
+                border-top: 15px solid transparent;
+                border-left: 15px solid #ccc;
+                border-right: 0 solid #ccc;
+                border-bottom: 15px solid transparent;
+                content: " ";
+            }
+
+            .timeline > li > .timeline-panel:after {
+                position: absolute;
+                top: 27px;
+                right: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-left: 14px solid #fff;
+                border-right: 0 solid #fff;
+                border-bottom: 14px solid transparent;
+                content: " ";
+            }
+
+        .timeline > li > .timeline-badge {
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            margin-left: -25px;
+            background-color: #999999;
+            z-index: 100;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+        }
+
+            .timeline > li.timeline-inverted > .timeline-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+
+            .timeline > li.timeline-inverted > .timeline-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+
+.timeline-badge.primary {
+    background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+    background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+    background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+    background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+    background-color: #5bc0de !important;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+
+    .timeline-body > p + p {
+        margin-top: 5px;
+    }
+
+@media (max-width: 767px) {
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+        ul.timeline > li > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.timeline > li > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+}
+
+.wrapper {
+        display: grid;
+    grid-gap: 10px;
+        grid-template-columns: [col] 125px [col] 800px [col] 100px [col] 100px  ;
+        grid-template-rows: [row] auto [row] auto [row] ;
+        background-color: #fff;
+        color: #444;
+    }
+
+    .c {
+      grid-column: col ;
+      grid-row: row 2 ;
+  }
+  .d {
+      grid-column: col 2 / span 3 ;
+      grid-row: row 2 ;
+  }
+
+
+  </style>
+
+  <style type="text/css">
+
+  #idd{
+    font-family: gta;
+  }
+
+  #cardd{
+    margin: 30px;
+  }
+
+
+  @font-face {
+    font-family: 'gta';
+    font-style: normal;
+    font-weight: 500;
+    font-size:25px;
+    src: url(pricedown.ttf);
+  }
+  </style>
+
+</head>
+
+<body class="index-page sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="documentation.html" id="idd">
+          GTA Project: Docs</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="dropdown nav-item">
+              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                <i class="material-icons">book</i> Documentation
+              </a>
+              <div class="dropdown-menu dropdown-with-icons">
+                <a href="Javascript:void(0)" class="dropdown-item" onClick="scrollToGoalsAndObjectives()">
+                  <i class="material-icons">accessibility</i> Goals and Objectives
+                </a>
+                <a href="javascript:void(0)" class="dropdown-item" onClick="scrollToPersonasAndScenarios()">
+                  <i class="material-icons">face</i> Personas
+                </a>
+                <a href="Javascript:void(0)" class="dropdown-item" onClick="scrollToPersonasAndScenarios()">
+                  <i class="material-icons">photo</i> Scenarios
+                </a>
+
+                <a href="Javascript:void(0)" class="dropdown-item" onClick="scrollToArchitecture()">
+                  <i class = "material-icons"> games</i> Architecture
+                </a>
+
+                <a href="javascript:void(0)" class="dropdown-item" onclick="scrollToLogBook()">
+                  <i class="material-icons">
+                    assignment</i> logBook</a>
+
+                    <a href="Javascript:void(0)" class="dropdown-item" onClick="scrollToWiki()">
+                      <i class = "material-icons">
+                        description</i> wiki
+                      </a>
+
+
+
+                    </div>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                      <i class="material-icons">person</i> Go to Client
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url('assets/img/teslamod.jpg');">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                  <div class="brand">
+                    <h1 id="idd">Documentation Area</h1>
+                    <h3>All about the project: Personas,. Scenarios, Arquitechture, Schedule</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main main-raised">
+
+            <div class="section section-GoalsAndObjectives" > <!-- style="background-color:#EFEFEF" -->
+              <div class="container">
+
+
+                  <h1>
+                    Goals and objectives
+                  </h1>
+                  <br>
+                  <br>
+
+
+                  <p> Our goal is to collect data from GTA V with different scenarios (like climate conditions) and use that to generate a dataset.
+                      An advantage of collect data from a virtual simulation it is the possibility to collect ideal data without noise  and the range is infinite because we can put the camera and also the LIDAR on the same position and the 3D Print cloud will perfectly coincide with the views from the camera. But the point is to be realistic, so we will handle the data to make it real as possible.
+                      We will also use different real LIDARs  specifications within the virtual LIDAR to generate more realistic data collection.
+                      With the dataset successfully generated, we will be able to identify objects on the game based on our generated dataset with help from 3D object detection algorithms.
+                       </p>
+              </div>
+            </div>
+
+
+
+            <div class="section section-Personas">
+              <div class = "container">
+
+                <h1> Personas </h1>
+                <br><br>
+                <div class="wrapper">
+                  <div class="c">
+                  <img src="./assets/img/faces/christian.jpg" alt="Circle Image" class="rounded-circle img-fluid"  height="100" width="100">
+                </div>
+                <div class="d">
+                <p>
+                  Filipe, is a 25 year old Bosch Employee and he’s working on autonomous driving. However he has an obstacle: this is a very expensive task as he needs a fleet of cars and sensors (especially LIDAR sensors). He needs to see if a LIDAR sensor is worth it on autonomous driving cars, so it may help him if there’s a software that simulate close enough to what he would encounter if he tested with a real car and LIDAR Sensors with different scenarios and different LIDARs .
+                </p>
+
+              </div>
+
+              </div>
+
+
+                <h1>
+                  <br>
+                </span> Scenarios </h1>
+
+
+
+                <div class="row">
+                  <!--  <p> Scenarios:<br> -->
+                  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;"  id="cardd">
+                    <div class="card-body">
+                      <h5 class="card-title">Scenario 1</h5>
+                      <p class="card-text">   Filipe want to test if LIDAR/car that
+                        can recognize an objectwith confidence
+                        under different type of atmospheric situations
+                        day, night, with rain, with snow or without.</p>
+                      </div>
+                    </div>
+
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id = "cardd">
+                      <div class="card-body">
+                        <h5 class="card-title">Scenario 2</h5>
+                        <p class="card-text">Filipe want to test the LIDAR/car that can recognize an object with confidence with different densities of people, animal, objects or even without.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id = "cardd">
+                      <div class="card-body">
+                        <h5 class="card-title">Scenario 3</h5>
+                        <p class="card-text">Filipe want to test the LIDAR/car under risky situations (like accidents).
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+
+          <div class="section section-architecture">
+              <div class = "container">
+                  <h1> Architecture </h1>
+                  <br><br>
+
+                  • The user will start the game and set up the scnario that he wants to test with.
+                  <br> <br>
+                  • Next, he wants to test the sensors that he wants, so he can input the LIDAR and Camera sensors specifications on our mod, and then test them.
+                  <br><br>
+                  • Our mod will generate a realistic colored point cloud and then, start recognize objects with certain level of confidence
+
+                  <br><br>
+
+
+
+                  <img src="./assets/img/architecture.png" alt="Rounded Image" class="rounded img-fluid">
+              </div>
+          </div>
+
+          <div class="section section-risksandissues">
+              <div class = "container">
+                  <h1> Risks and Issues </h1>
+                  <br><br><br><br>
+                  <p>Fusion with camera and LIDAR can be a very hard task, but since it is already completed, there are no risks </p>
+              </div>
+          </div>
+
+
+
+          <div class="section section-logbook">
+              <div class = "container">
+                  <h1> LoogBook </h1> <br> <br> <br> <br>
+                  <div class="col-md-8 ml-auto mr-auto">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <ul class="nav nav-pills nav-pills-icons flex-column" role="tablist">
+                          <!--
+                                              color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                                          -->
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#week-1" role="tab" data-toggle="tab" >
+                              Week #1
+                            <!--  <i class="material-icons">dashboard</i> Dashboard -->
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#week-2" role="tab" data-toggle="tab">
+                              week #2
+                              <!--<span class="badge badge-primary">GTA V Mod</span> -->
+                            <!--  <i class="material-icons">document</i> Schedule -->
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#week-3" role="tab" data-toggle="tab">
+                              week #3
+                              <!--<span class="badge badge-primary">GTA V Mod</span> -->
+                            <!--  <i class="material-icons">document</i> Schedule -->
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#week-4" role="tab" data-toggle="tab">
+                              week #4
+                              <!--<span class="badge badge-primary">GTA V Mod</span> -->
+                            <!--  <i class="material-icons">document</i> Schedule -->
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#week-5" role="tab" data-toggle="tab">
+                              week #5
+                              <!--<span class="badge badge-primary">GTA V Mod</span> -->
+                            <!--  <i class="material-icons">document</i> Schedule -->
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="week-1">
+                            <p> <b> 13/02/2018 </b> </p>
+                            <p>Information about the course, class and project themes.</p>
+                          </div>
+                          <div class="tab-pane" id="week-2">
+                            <p> <b> 20/02/2018 </b> </p>
+                            Project and teammates distribution, first and informal meeting with the mentor.
+                          </div>
+                          <div class="tab-pane" id="week-3">
+                            <p> <b> 27/02/2018 </b> </p>
+                            First formal meeting with the mentor to discuss about the envolving technologies, concepts and about the MVP (Minimum Viable Product). <br> Became familiar with the new and essential tecnologies and framewors for the project.
+                          </div>
+                          <div class="tab-pane" id="week-4">
+
+                          </div>
+                          <div class="tab-pane" id="week-5">
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel bg-dark text-white">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Week 5</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>11-03-2019 to 17-03-2019</small></p>
+            </div>
+            <div class="timeline-body">
+              <p></p>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel bg-dark text-white">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Week 4</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>11-03-2019 to 17-03-2019</small></p>
+            </div>
+            <div class="timeline-body">
+              <p></p>
+            </div>
+          </div>
+        </li>
+
+        <li class = "timeline">
+          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel bg-dark text-white">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Week 3</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>11-03-2019 to 17-03-2019</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>First formal meeting with the mentor to discuss about the envolving technologies, concepts and about the MVP (Minimum Viable Product). <br> Became familiar with the new and essential tecnologies and framewors for the project.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel bg-dark text-white">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Week 2</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>11-03-2019 to 17-03-2019</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Project and teammates distribution, first and informal meeting with the mentor.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class = "timeline">
+          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel bg-dark text-white">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Week 1</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>11-03-2019 to 17-03-2019</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Information about the course, class and project themes.</p>
+            </div>
+          </div>
+        </li>
+
+    </ul>
+
+  -->
+
+  </div>
+</div>
+
+
+
+          <div class="section section-Wiki">
+              <div class = "container">
+                  <h1> Wiki </h1>
+                  <br><br>
+
+                  <div class = "row">
+                  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id = "cardd">
+                    <div class="card-body">
+                      <h5 class="card-title">Milestone 1</h5>
+                      <p class="card-text">Document about Milestone 1: Define Scope and Minimum  Viable Product
+                      </p>
+                      <form method="get" action="Milestone_1.pdf">
+                      <button class="btn btn-primary btn-round" type="submit">
+                        <i class="material-icons">cloud_download</i> Download PDF
+                      </button>
+                    </form>
+                    </div>
+                  </div>
+
+                  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id = "cardd">
+                    <div class="card-body">
+                      <h5 class="card-title">Milestone 3</h5>
+                      <p class="card-text">
+                        Document about Milestone 3: MVP (Minium Viable Product)
+                      </p>
+                      <form method="get" action="Milestone_2.pdf">
+                      <button class="btn btn-primary btn-round" type="submit">
+                        <i class="material-icons">cloud_download</i> Download PDF
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id = "cardd">
+                    <div class="card-body">
+                      <h5 class="card-title">Milestone 5</h5>
+                      <p class="card-text">
+                      </p>
+                      <button class="btn btn-primary btn-round">
+                        <i class="material-icons">favorite</i> Comming soon
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id = "cardd">
+                    <div class="card-body">
+                      <h5 class="card-title">Milestone 6</h5>
+                      <p class="card-text">
+                      </p>
+                      <button class="btn btn-primary btn-round" download="Milestone_1">
+                        <i class="material-icons">favorite</i> Comming soon
+                      </button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+              <!--
+
+              <div class="section section-download" id="downloadSection">
+              <div class="container">
+              <div class="row text-center">
+              <div class="col-md-8 ml-auto mr-auto">
+              <h2>Do you love this UI Kit?</h2>
+              <h4>Cause if you do, it can be yours for FREE. Hit the buttons below to navigate to our website where you can find the kit. Our friends from
+              <a href="https://themeisle.com/?utm_campaign=mkfree-hestia&amp;utm_source=creativetim&amp;utm_medium=website" target="_blank">ThemeIsle</a> created a Wordpress Theme which can be also downloaded for free. Start a new project or give an old Bootstrap project a new look!</h4>
+            </div>
+            <div class="col-sm-8 col-md-6 ml-auto mr-auto">
+            <a href="https://www.creative-tim.com/product/material-kit" class="btn btn-primary btn-lg">
+            <i class="fa fa-html5"></i> Free HTML Download
+          </a>
+          <a href="https://themeisle.com/themes/hestia/?utm_campaign=mkfree-hestia&amp;utm_source=creativetim&amp;utm_medium=website" target="_blank" class="btn btn-primary btn-lg">
+          <i class="fa fa-wordpress"></i> Wordpress Theme
+        </a>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row text-center">
+    <div class="col-md-8 ml-auto mr-auto">
+    <h2>Want more?</h2>
+    <h4>We've just launched
+    <a href="https://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-mk-demos" target="_blank">Material Kit PRO</a>. It has a huge number of components, sections and example pages. Start Your Development With A Badass Bootstrap UI Kit inspired by Material Design.</h4>
+  </div>
+  <div class="col-sm-8 col-md-5 ml-auto mr-auto">
+  <a href="https://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-mk-demos" class="btn btn-rose btn-upgrade btn-lg" target="_blank">
+  <i class="material-icons">unarchive</i> Upgrade to PRO
+</a>
+</div>
+</div>
+<div class="sharing-area text-center">
+<div class="row justify-content-center">
+<h3>Thank you for supporting us!</h3>
+</div>
+<button id="twitter" class="btn btn-raised btn-twitter sharrre">
+<i class="fa fa-twitter"></i> Tweet
+</button>
+<button id="facebook" class="btn btn-raised btn-facebook sharrre">
+<i class="fa fa-facebook-square"></i> Share
+</button>
+<button id="googlePlus" class="btn btn-raised btn-google-plus sharrre">
+<i class="fa fa-google-plus"></i> Share
+</button>
+<a id="github" href="https://github.com/creativetimofficial/material-kit" target="_blank" class="btn btn-raised btn-github">
+<i class="fa fa-github"></i> Star
+</a>
+</div>
+</div>
+</div>
+
+
+
+
+
+Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+<br>
+<br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+
+Filipe want to test if LIDAR/car that
+can recognize an objectwith confidence
+under different type of atmospheric situations
+day, night, with rain, with snow or without.
+
+Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+<br>
+<br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+-->
+
+</div>
+<!--  End Modal -->
+<footer class="footer" data-background-color="black">
+  <div class="container">
+    <nav class="float-left">
+      <ul>
+        <li>
+          <img src="./assets/img/logo_UA.png" width="150px">
+        </li>
+        <li>
+          <a href="https://code.ua.pt/projects/pei-2018-2019-g13?jump=my">
+            code.ua.pt
+          </a>
+        </li>
+        <!-- <li>
+        <a href="https://creative-tim.com/presentation">
+        About Us
+      </a>
+    </li>
+    <li>
+    <a href="http://blog.creative-tim.com">
+    Blog
+  </a>
+</li> -->
+
+</ul>
+</nav>
+</div>
+</footer>
+<!--   Core JS Files   -->
+<script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+<script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+<script src="./assets/js/plugins/moment.min.js"></script>
+<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+<script src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+<script src="./assets/js/material-kit.js?v=2.0.5" type="text/javascript"></script>
+
+
+<script>
+$(document).ready(function() {
+  //init DateTimePickers
+  materialKit.initFormExtendedDatetimepickers();
+
+  // Sliders Init
+  materialKit.initSliders();
+});
+
+
+function scrollToDownload() {
+
+  if ($('.section-download').length != 0) {
+    $("html, body").animate({
+      scrollTop: $('.section-download').offset().top
+    }, 1000);
+  }
+}
+
+function scrollToPersonasAndScenarios() {
+
+  if ($('.section-Personas').length != 0) {
+    $("html, body").animate({
+      scrollTop: $('.section-Personas').offset().top
+    }, 1000);
+  }
+}
+
+function scrollToArchitecture() {
+
+  if($('.section-architecture').lengh != 0) {
+
+    $("html, body").animate( {scrollTop: $('.section-architecture').offset().top}, 1000);
+  }
+}
+
+function scrollToLogBook() {
+
+  if($('.section-logbook').lengh != 0) {
+
+    $("html, body").animate( {scrollTop: $('.section-logbook').offset().top}, 1000);
+  }
+}
+
+function scrollToWiki() {
+
+  if($('.section-Wiki').lengh != 0) {
+
+    $("html, body").animate( {scrollTop: $('.section-Wiki').offset().top}, 1000);
+  }
+}
+
+function scrollToGoalsAndObjectives() {
+
+  if($('.section-GoalsAndObjectives').lengh != 0) {
+
+    $("html, body").animate( {scrollTop: $('.section-GoalsAndObjectives').offset().top}, 1000);
+
+
+  }
+}
+
+
+
+</script>
+
+<!--_- }) Scroll s = 808080101010AFAFAFDFDFDF .com. i  <div class="col-sm-2 ml-auto">
+<h4>Rounded Raised</h4>
+<img src="./assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid">
+</div>
+<div class="col-sm-2 ml-auto">
+<h4>Circle Raised</h4>
+<img src="./assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+</div> <div class="col-sm-2">
+<h4>Rounded Image</h4>
+<img src="./assets/img/faces/avatar.jpg" alt="Rounded Image" class="rounded img-fluid">
+</div> Tiago-Correia jpg Tago Correia
+
+<div class="copyright float-right">
+&copy;
+<script>
+document.write(new Date().getFullYear())
+</script>, made with <i class="material-icons">favorite</i> by
+<a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+</div>
+/pricedown/
+12
+>
+/pricedown/
+-->
+</body>
+
+</html>

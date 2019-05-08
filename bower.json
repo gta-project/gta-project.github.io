@@ -1,0 +1,30 @@
+{
+  "name": "GTAVProject",
+  "homepage": "https://github.com/creativetimofficial/material-kit",
+  "authors": [
+    "Bruno Aguiar",
+    "Xavier Santos",
+    "João Gomes",
+    "Tiago Correia"
+  ],
+  "description": "A Badass Bootstrap UI Kit based on Material Design",
+  "main": "index.html",
+  "keywords": [
+    "GTA",
+    "GTAV",
+    "Mods",
+    "Autonomous",
+    "Driving",
+    "SoftwareEngeniring",
+    "Project"
+  ],
+  "license": "Creative TIM License",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
+
